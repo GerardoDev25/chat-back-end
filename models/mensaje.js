@@ -1,5 +1,5 @@
-import { Schema, model, SchemaTypes } from 'mongoose';
-
+import pkg from 'mongoose';
+const { Schema, model, SchemaTypes } = pkg;
 const MensajeSchema = Schema(
   {
     de: { type: SchemaTypes.ObjectId, ref: 'Usuario', required: true },
