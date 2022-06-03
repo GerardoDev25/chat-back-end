@@ -5,7 +5,8 @@ import mongoose from 'mongoose';
 import { Server as ServerSocket } from 'socket.io';
 
 import Sockets from './sockets.js';
-import router from '../router/auth.js';
+import routerAuth from '../router/auth.js';
+import routerMensaje from '../router/mensajes.js';
 
 class Server {
   constructor() {
@@ -22,7 +23,8 @@ class Server {
     this.app.use(cors());
     this.app.use(express.json());
 
-    this.app.use('/api/login', router);
+    this.app.use('/api/login', routerAuth);
+    this.app.use('/api/mensaje', routerMensaje);
   }
   configurarSockets() {
     new Sockets(this.io);

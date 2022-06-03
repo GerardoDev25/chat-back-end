@@ -8,12 +8,19 @@ class Sockets {
   socketEvents() {
     // On connection
     this.io.on('connection', (socket) => {
-      // Escuchar evento: mensaje-to-server
-      socket.on('mensaje-to-server', (data) => {
-        console.log(data);
+      // todo validar jwt
 
-        this.io.emit('mensaje-from-server', data);
-      });
+      // todo saber que usuario esta activo
+
+      // todo emitir todos los usuarios conectados
+
+      // todo unirme a una sala espesifica
+
+      // todo necesito estar escuchando cuando alguien envia un mensaje
+
+      // todo manejar el disconnect
+
+      // todo emitir todos los usuarios conectados
     });
   }
 }

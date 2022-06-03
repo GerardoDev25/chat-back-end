@@ -16,4 +16,4 @@ MensajeSchema.method('toJSON', function () {
   return object;
 });
 
-export default model('usuario', MensajeSchema);
+export default model('Mensaje', MensajeSchema);
